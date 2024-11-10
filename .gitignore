@@ -1,0 +1,49 @@
+# 忽略Python缓存和临时文件
+__pycache__
+*.py[cod]
+
+# 忽略日志文件
+logs/
+.log
+
+# 忽略虚拟环境
+venv/
+env/
+.venv/
+
+# 忽略IDE生成的临时和配置文件
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# 忽略自动生成的Pipfile.lock (如果你使用的是pipenv)
+Pipfile.lock
+
+# 忽略本地数据库文件（如果适用）
+db.sqlite3
+
+# 忽略FastAPI自动重载时生成的文件（如果使用了uvicorn运行）
+.uvicorn.pid
+.uvicorn.log
+
+# 如果你使用 poetry
+poetry.lock
+.pypoetry/
+
+# 可能存在的测试覆盖率报告
+htmlcov/
+
+# 如果有生成的文档，可以忽略构建结果
+docs/_build/
+
+# 针对Docker的相关生成文件
+.dockerignore
+docker-compose.override.yml
+docker-compose.yml
+docker/
+
+# 其他可能不需要版本控制的特定于项目的文件或目录
+files
+.env
