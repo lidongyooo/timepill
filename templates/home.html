@@ -13,11 +13,46 @@
         }
 
         .container {
-            max-width: 500px;
+            max-width: 250px;
             width: 100vw;
             height: 100vh;
             margin: 0 auto;
             border: none;
+        }
+
+        .container .introduce {
+            margin-top: 20px;
+        }
+
+        .introduce .repository{
+            padding-top: 5px;
+        }
+
+        .container .info{
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .info .input-item{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .input-item .input{
+            padding: 3px;
+            width: 70%;
+        }
+
+        .input-item .button{
+            position: absolute;
+            right: 1px;
+            top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #338EE3;
+            color: white;
         }
     </style>
 </head>
@@ -28,13 +63,36 @@
             微信：lidongyooo
         </div>
         <div class="repository">
-            GitHub: <a href="">timepill</a>
+            GitHub: <a href="https://github.com/lidongyooo/timepill" target="_blank">timepill</a>
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="input-item">
+            <div class="label">
+                用户ID：
+            </div>
+            <input type="text" class="input">
+        </div>
+
+        <div class="input-item">
+            <button class="button">
+                开始备份
+            </button>
         </div>
     </div>
 </div>
 <script src="{{ url_for('static', path='/jquery3.7.1min.js') }}"></script>
 <script>
-    console.log($('.container').html())
+    $('.button').click(function () {
+        let userId = $('.input').val()
+        if (!userId) {
+            alert('用户ID不能为空。')
+            return
+        }
+
+        window.open('/backups/'+ userId, '_blank');
+    })
 </script>
 </body>
 </html>

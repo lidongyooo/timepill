@@ -1,0 +1,65 @@
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.user{
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #D5D5D5;
+}
+
+.user .info{
+    display: flex;
+}
+
+.info .avatar img{
+    border-radius: 100%;
+}
+
+.info .human {
+    padding-left: 10px;
+}
+.info .human .name {
+    color: blue;
+}
+
+.info .human .time{
+    padding-top: 10px;
+}
+
+.user .introduce {
+    padding-top: 10px;
+}
+
+.list{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.list .item {
+    margin-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(211, 214, 219, 0.5);
+}
+
+.item .title{
+    font-size: 0.95rem;
+    color: #444444;
+}
+
+.item .content{
+    text-wrap: inherit;
+}
+
+.item .visual{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.item .visual img{
+    width: 100%;
+}
