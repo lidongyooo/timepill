@@ -84,6 +84,6 @@ def send_request(method: str, url: str):
     return json.loads(res.content.decode("utf-8"))
 
 
-@app.get("/home", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
     return templates.TemplateResponse(request=request, name="home.html")
