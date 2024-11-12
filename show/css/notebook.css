@@ -1,7 +1,7 @@
 .container{
     width: 100vw;
     min-height: 100vh;
-    max-width: 500px;
+    max-width: 420px;
     margin: 0 auto;
     padding: 15px;
 }

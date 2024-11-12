@@ -24,27 +24,27 @@
             margin-top: 20px;
         }
 
-        .introduce .repository{
+        .introduce .repository {
             padding-top: 5px;
         }
 
-        .container .info{
+        .container .info {
             width: 100%;
             margin-top: 20px;
         }
 
-        .info .input-item{
+        .info .input-item {
             position: relative;
             display: flex;
             justify-content: space-between;
         }
 
-        .input-item .input{
+        .input-item .input {
             padding: 3px;
             width: 70%;
         }
 
-        .input-item .button{
+        .input-item .button {
             position: absolute;
             right: 1px;
             top: 10px;
@@ -54,19 +54,23 @@
             background: #338EE3;
             color: white;
         }
+
+        .questions {
+            width: 100%;
+            margin-top: 70px;
+        }
+
+        .questions .item {
+            margin-top: 20px;
+        }
+
+        .questions .item .question {
+            color: red;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="introduce">
-        <div class="owner">
-            微信：lidongyooo
-        </div>
-        <div class="repository">
-            GitHub: <a href="https://github.com/lidongyooo/timepill" target="_blank">timepill</a>
-        </div>
-    </div>
-
     <div class="info">
         <div class="input-item">
             <div class="label">
@@ -81,6 +85,50 @@
             </button>
         </div>
     </div>
+
+    <div class="questions">
+        <div class="item">
+            <div class="question">
+                Q1：怎么知道我的用户ID？
+            </div>
+            <div class="answer">
+                A1：登录<a href="https://timepill.net" target="_blank">胶囊网页版</a>，进入我的日记。网页地址栏最后一串数字就是用户ID。
+            </div>
+        </div>
+        <div class="item">
+            <div class="question">
+                Q2：怎么查看日记？
+            </div>
+            <div class="answer">
+                A2：将压缩文件解压，进入文件夹，点击 index.html 到浏览器打开。
+            </div>
+        </div>
+        <div class="item">
+            <div class="question">
+                Q3：为什么 iphone 打不开？
+            </div>
+            <div class="answer">
+                A3：苹果自带浏览器不支持打开本地文件。App Store 下载【Files App】应用，找到压缩文件共享给 Files App。然后参见
+                Q2。
+            </div>
+        </div>
+        <div class="item">
+            <div class="question">
+                Q4：是开源的吗？
+            </div>
+            <div class="answer">
+                A4：是的。<a href="https://github.com/lidongyooo/timepill" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="question">
+                Q5：我有疑问，怎么联系？
+            </div>
+            <div class="answer">
+                WX：lidongyooo
+            </div>
+        </div>
+    </div>
 </div>
 <script src="{{ url_for('static', path='/jquery3.7.1min.js') }}"></script>
 <script>
@@ -91,7 +139,7 @@
             return
         }
 
-        window.open('/backups/'+ userId, '_blank');
+        window.open('/backups/' + userId, '_blank');
     })
 </script>
 </body>
